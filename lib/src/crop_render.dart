@@ -100,8 +100,8 @@ class RenderCrop extends RenderBox with RenderObjectWithChildMixin<RenderBox> {
 
     final forcedSize =
         _getSizeToFitByRatio(aspectRatio!, size.width, size.height);
-    Rect rect = Rect.fromCenter(
-        center: center, width: forcedSize.width, height: forcedSize.height);
+    Rect rect = Rect.fromCircle(
+        center: center, radius: forcedSize.width / 2);
 
     final path = Path();
     if (shape == BoxShape.circle) {
